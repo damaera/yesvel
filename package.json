@@ -5,6 +5,7 @@
   "dependencies": {
     "firebase": "^4.3.0",
     "firebaseui": "^2.3.0",
+    "katex": "^0.8.2",
     "mirrorx": "^0.2.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

@@ -3,20 +3,12 @@ import { connect, actions } from 'mirrorx'
 
 import styled from 'styled-components'
 
-import ReactQuill from 'react-quill'
-import theme from 'react-quill/dist/quill.snow.css'
-
 const TabsWrapper = styled.div`
   float: left;
 `
 
 class Tabs extends Component {
-  state = {
-    text: ''
-  }
-  handleChange = (value) => {
-    this.setState({ text: value })
-  }
+
   render () {
     const { openedTabs } = this.props
     // console.log(openedTabs)
@@ -30,11 +22,6 @@ class Tabs extends Component {
             </button>
           )
         })}
-        <div>
-          <ReactQuill
-            value={this.state.text}
-            onChange={this.handleChange} />
-        </div>
       </TabsWrapper>
     )
   }
@@ -42,6 +29,7 @@ class Tabs extends Component {
 
 export default connect(state => {
   return {
+    userId: state.auth.uid,
     folderTree: state.folderTree.data,
     openedTabs: Object.assign({}, state.tabs.openedTabs)
   }

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 import { Route, connect, actions } from 'mirrorx'
 
-import Home from './pages/Home'
-import Editor from './pages/Editor'
+import HomePage from './pages/HomePage'
+import EditorPage from './pages/EditorPage'
 
 class App extends Component {
   componentDidMount() {
@@ -13,8 +13,8 @@ class App extends Component {
   render () {
     return (
       <div className="App">
-        <Route exact path="/" component={Home}/>
-        <Route path="/editor" component={Editor}/>
+        <Route exact path="/" component={HomePage}/>
+        <Route path="/editor" component={EditorPage}/>
       </div>
     );
   }

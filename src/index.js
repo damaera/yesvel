@@ -8,6 +8,7 @@ import { render, Router } from 'mirrorx'
 import './store/AuthModel'
 import './store/FolderTreeModel'
 import './store/TabModel'
+import './store/EditorModel'
 
 import registerServiceWorker from './registerServiceWorker';
 

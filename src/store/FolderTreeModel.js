@@ -22,9 +22,11 @@ const FolderTreeModel = mirror.model({
         firstTime: null
       }
     },
+
     setSelectedFile (state, { selectedFile }) {
       return { ...state, selectedFile }
     },
+
     collapseFolder (state, { uid }) {
       let newData = Object.assign({}, state.data)
       if (uid === 0) {
